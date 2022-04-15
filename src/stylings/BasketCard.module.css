@@ -1,0 +1,92 @@
+
+
+.wrapper{
+ width: 600px;
+ height: 160px;
+ margin: 10px;
+ background-color: rgb(255, 255, 255);
+ border: 1px solid black;
+ border-radius: 20px;
+ overflow: hidden;
+ position: relative;
+}
+
+
+.show{
+    display: flex;
+}
+
+.hidden{
+    display: none;
+}
+
+.wrapimg{
+width: 200px;
+height: 160px;
+position: absolute;
+right: 0;
+}
+
+
+.tools{
+    width: 600px;
+    height: 60px;
+  
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(129, 129, 151);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px;
+    cursor: pointer;
+    border:1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: rgb(156, 156, 177);
+}
+.received{
+    font-size: 35px;
+}
+
+
+.btntrash{
+width: 30px;
+height: 30px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.btntrash img{
+    width: 30px;
+height: 30px;
+}
+
+
+.money{
+    position: absolute;
+    left: 5px;
+font-size: 28px;
+}
+
+
+.name{
+    position: absolute;
+    left: 5px;
+    top: -2px;
+    font-size: 30px;
+}
