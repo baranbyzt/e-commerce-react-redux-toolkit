@@ -1,0 +1,24 @@
+.errorimg {
+  width: 425rem00px;
+  position: absolute;
+  bottom: 25rem;
+  left: 13.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .errorimg {
+    width: 18.75rem;
+    position: absolute;
+    bottom: 25rem;
+    left: 6.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .errorimg {
+    width: 25rem;
+    position: absolute;
+    bottom: 18.75rem;
+    left: 43.75rem;
+  }
+}

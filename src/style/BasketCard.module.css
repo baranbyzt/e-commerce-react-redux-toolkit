@@ -1,0 +1,83 @@
+.wrapper {
+  width: 37.5rem;
+  height: 10rem;
+  margin: 0.625;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.show {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapimg {
+  width: 12.5rem;
+  height: 10rem;
+  position: absolute;
+  right: 0;
+}
+
+.tools {
+  width: 37.5rem;
+  height: 3.75rem;
+  margin-top: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.btn {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: rgb(129, 129, 151);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.75rem;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  border-radius: 0.6rem;
+}
+.btn:hover {
+  background-color: rgb(156, 156, 177);
+}
+.received {
+  font-size: 2.2rem;
+}
+
+.btntrash {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btntrash img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.money {
+  position: absolute;
+  left: 0.2rem;
+  font-size: 2rem;
+}
+
+.name {
+  position: absolute;
+  left: 5px;
+  top: -2px;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,33 @@
+.wrapper {
+  margin-top: 7.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.itemssection {
+  overflow: hidden;
+  width: auto;
+  overflow-y: scroll;
+  height: 43.75rem;
+  scroll-behavior: initial;
+}
+.bill {
+  width: 15rem;
+  height: 12.5rem;
+  margin-left: 3.3rem;
+  background-color: rgb(203, 191, 214);
+  border-radius: 1rem;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-right: 3.3rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 44rem) {
+  .bill {
+    margin-top: 3.3rem;
+  }
+}

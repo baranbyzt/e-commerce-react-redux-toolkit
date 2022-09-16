@@ -1,10 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// navigation
 import Navigation from "./Navigation";
-// style
-import "./stylings/General.css";
-// our store
+import "./style/General.css";
 import { Provider } from "react-redux";
 import store from "./store/Store";
 

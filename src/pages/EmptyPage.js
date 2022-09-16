@@ -1,16 +1,12 @@
-
-
-// our img
-import img from '../assets/404.png'
-// our style
-import style from '../stylings/EmptyPage.module.css'
+import img from "../assets/images/404.png";
+import style from "../style/EmptyPage.module.css";
 
 const EmptyPage = () => {
-    return ( 
-      <div>
-          <img className={style.errorimg} src={img}/>
-      </div>
-     );
-}
- 
+  return (
+    <div>
+      <img className={style.errorimg} src={img} />
+    </div>
+  );
+};
+
 export default EmptyPage;
