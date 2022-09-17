@@ -83,3 +83,29 @@
   top: -2px;
   font-size: 1.8rem;
 }
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: relative;
+    background-color: yellow;
+    width: 22.5rem;
+    height: 20rem;
+    margin: 0.625;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .wrapimg {
+    width: 21rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+  }
+  .tools {
+    width: 27.5rem;
+  }
+}
