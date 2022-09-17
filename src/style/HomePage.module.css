@@ -1,6 +1,7 @@
 .wrapper {
   width: 80%;
   display: flex;
+  z-index: 1rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

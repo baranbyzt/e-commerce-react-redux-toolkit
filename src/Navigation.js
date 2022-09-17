@@ -1,4 +1,4 @@
-import Menu from "./component/Header";
+import Header from "./component/Header";
 import HomePage from "./pages/HomePage";
 import BasketPage from "./pages/BasketPage";
 import EmptyPage from "./pages/EmptyPage";
@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function Navigation() {
   return (
     <Router>
-      <Menu />
+      <Header />
       <div className="fixed_problem">
         <Routes>
           <Route path="/" element={<HomePage />} />

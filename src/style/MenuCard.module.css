@@ -2,11 +2,12 @@
   background-color: rgb(110, 110, 128);
   width: 100%;
   height: 3.125rem;
-  margin-right: 3.125rem;
+  margin-right: auto;
   margin-left: auto;
   margin-right: auto;
+  z-index: 8rem;
   margin: 0.3rem;
-  position: fixed;
+  position: static;
   top: -0.3rem;
   left: -0.3rem;
   padding: 0.6rem;
@@ -27,7 +28,7 @@
   border-radius: 100%;
 }
 .basketpng:hover {
-  background-color: rgb(109, 109, 86);
+  background-color: rgb(210, 210, 28);
 }
 .home {
   cursor: pointer;

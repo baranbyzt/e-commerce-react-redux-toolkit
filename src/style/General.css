@@ -12,4 +12,5 @@ body {
 
 .fixed_problem {
   margin-bottom: 12.5rem;
+  z-index: 1rem;
 }
