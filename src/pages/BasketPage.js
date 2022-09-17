@@ -8,7 +8,7 @@ const BasketPage = () => {
   const todos = useSelector(selectAllProducts);
   const todoMoney = useSelector(selectMoney);
 
-  let KDV = todoMoney.total_spend / 18;
+  let KDV = todoMoney.totalSpend / 18;
 
   return (
     <div className={style.wrapper}>
@@ -19,14 +19,14 @@ const BasketPage = () => {
       </div>
       <div className={style.bill}>
         <div>
-          <p>sepet toplam: {todoMoney.total_spend} ₺</p>
+          <p>basket total: {todoMoney.totalSpend} ₺</p>
           <p>%18-KDV: {KDV.toFixed(2)} ₺</p>
-          <p>kargo masrafı: {todoMoney.total_spend > 100 ? "FREE" : 30} </p>
+          <p>shipping cost: {todoMoney.totalSpend > 100 ? "FREE" : 30} </p>
           <p>
-            TOPLAM:{" "}
-            {(todoMoney.total_spend > 100
-              ? todoMoney.total_spend + KDV
-              : todoMoney.total_spend + KDV + 30
+            TOTAL:{" "}
+            {(todoMoney.totalSpend > 100
+              ? todoMoney.totalSpend + KDV
+              : todoMoney.totalSpend + KDV + 30
             ).toFixed(2)}{" "}
             ₺
           </p>
