@@ -27,7 +27,6 @@ const HomeCards = ({ data }) => {
             <img src={img} />
             <b>+</b>
           </div>
-
           <div
             className={data.product_received > 0 ? style.show : style.hidden}
           >

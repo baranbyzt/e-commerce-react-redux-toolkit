@@ -8,22 +8,22 @@ const Menu = () => {
   let navigate = useNavigate();
   const todosmoney = useSelector(selectMoney);
 
-  let gohome = () => {
+  let goHome = () => {
     navigate("./");
   };
-  let gobasket = () => {
+  let goBasket = () => {
     navigate("./basket");
   };
 
   return (
     <div className={style.wrapper}>
       <div>
-        <p onClick={gohome} className={style.home}>
+        <p onClick={goHome} className={style.home}>
           Market
         </p>
       </div>
       <div className={style.wrapperinner}>
-        <img onClick={gobasket} className={style.basketpng} src={img}></img>
+        <img onClick={goBasket} className={style.basketpng} src={img}></img>
       </div>
     </div>
   );
