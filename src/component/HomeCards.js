@@ -27,11 +27,9 @@ const HomeCards = ({ data }) => {
             <img src={img} />
             <b>+</b>
           </div>
-          <div
-            className={data.product_received > 0 ? style.show : style.hidden}
-          >
+          <div className={data.productReceived > 0 ? style.show : style.hidden}>
             <div className={style.count}>
-              <b>{data.product_received}</b>
+              <b>{data.productReceived}</b>
             </div>
           </div>
         </div>

@@ -16,7 +16,13 @@
   align-items: center;
   margin-bottom: 3.125rem;
 }
-
+.todomoney {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 10%;
+  background-color: white;
+  font-weight: 400;
+}
 .wrapper div {
   padding-right: 4.3rem;
 }

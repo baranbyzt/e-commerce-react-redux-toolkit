@@ -7,29 +7,30 @@ export const CardSlice = createSlice({
     items: ProductsData,
     totalBasket: 0,
     totalSpend: 0,
+    disposableMoney: 300,
   },
   reducers: {
     control: (state, action) => {
       const dd = action.payload - 1;
-      if (state.items[dd].amount <= state.items[dd].product_received) {
+      if (state.items[dd].amount <= state.items[dd].productReceived) {
       } else {
-        state.items[dd].product_received += 1;
+        state.items[dd].productReceived += 1;
       }
     },
     btnIncreaseItem: (state, action) => {
       const dd = action.payload - 1;
-      if (state.items[dd].amount <= state.items[dd].product_received) {
+      if (state.items[dd].amount <= state.items[dd].productReceived) {
       } else {
-        state.items[dd].product_received += 1;
+        state.items[dd].productReceived += 1;
       }
     },
     btnDecreaseItem: (state, action) => {
       const dd = action.payload - 1;
-      state.items[dd].product_received -= 1;
+      state.items[dd].productReceived -= 1;
     },
     btnDeleteItem: (state, action) => {
       const dd = action.payload - 1;
-      state.items[dd].product_received = 0;
+      state.items[dd].productReceived = 0;
     },
     totalSpend: (state, action) => {
       const money = action.payload;
@@ -41,7 +42,7 @@ export const CardSlice = createSlice({
     },
     basketInncrease: (state, action) => {
       let myid = action.payload - 1;
-      if (state.items[myid].amount > state.items[myid].product_received) {
+      if (state.items[myid].amount > state.items[myid].productReceived) {
         state.totalBasket += 1;
       } else {
       }
@@ -57,6 +58,7 @@ export const CardSlice = createSlice({
 
 export const selectAllProducts = (state) => state.card.items;
 export const selectMoney = (state) => state.card;
+export const selectMoneyDirectly = (state) => state.card.disposableMoney;
 export const {
   control,
   btnIncreaseItem,
