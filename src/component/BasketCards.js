@@ -13,30 +13,31 @@ import {
 import img_trash from "../assets/images/trash.png";
 
 const BasketCards = ({ data }) => {
-  let ad = data.price;
-  let da = data.product_received;
+  const price = data?.price ?? 0;
+  const productReceived = data?.productReceived;
 
   let dispatch = useDispatch();
   let decrease = () => {
-    dispatch(btnDecreaseItem(data.id));
-    dispatch(totalSpendReduce(data.price));
+    dispatch(btnDecreaseItem(data?.id ?? 1));
+    dispatch(totalSpendReduce(data?.price ?? 1));
     dispatch(basketDecrease(1));
   };
   let increase = () => {
-    dispatch(btnIncreaseItem(data.id));
-    dispatch(totalSpend(data.price));
-    dispatch(basketInncrease(data.id));
+    dispatch(btnIncreaseItem(data?.id ?? 1));
+    dispatch(totalSpend(data?.price ?? 1));
+    dispatch(basketInncrease(data?.id ?? 1));
   };
 
   let trashitem = () => {
-    dispatch(btnDeleteItem(data.id));
+    dispatch(btnDeleteItem(data?.id ?? 1));
+    decrease();
   };
 
   return (
-    <div className={data.product_received > 0 ? style.show : style.hidden}>
+    <div className={data?.productReceived > 0 ? style.show : style.hidden}>
       <div className={style.wrapper}>
-        <img className={style.wrapimg} src={data.img} />
-        <p className={style.name}>{data.title}</p>
+        <img className={style.wrap} src={data.img} />
+        <p className={style.name}>{data?.title ?? "product name"}</p>
         <div className={style.tools}>
           <div onClick={trashitem} className={style.btntrash}>
             <img src={img_trash} />
@@ -45,11 +46,13 @@ const BasketCards = ({ data }) => {
           <div onClick={increase} className={style.btn}>
             +
           </div>
-          <div className={style.received}>{data.product_received} kg</div>
+
+          <div className={style.received}>{data.productReceived} kg</div>
           <div onClick={decrease} className={style.btn}>
             -
           </div>
-          <p className={style.money}>{ad * da} ₺</p>
+
+          <p className={style.money}>{price * productReceived} ₺</p>
         </div>
       </div>
     </div>

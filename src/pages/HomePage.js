@@ -9,9 +9,11 @@ const HomePage = () => {
 
   return (
     <div className={style.wrapper}>
-      {todos.map((todo, key) => (
-        <HomeCards key={key} data={todo} />
-      ))}
+      {todos !== null || undefined ? (
+        todos.map((todo, key) => <HomeCards key={key} data={todo} />)
+      ) : (
+        <p>ups..</p>
+      )}
     </div>
   );
 };

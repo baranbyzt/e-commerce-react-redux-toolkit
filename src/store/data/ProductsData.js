@@ -3,7 +3,7 @@ ProductsData = [
   {
     id: 1,
     amount: 3,
-    product_received: 0,
+    productReceived: 0,
     price: 5,
     title: "domates",
     img: "https://www.medikalakademi.com.tr/wp-content/uploads/2021/02/domates-tomato-4.jpg.webp",
@@ -11,7 +11,7 @@ ProductsData = [
   {
     id: 2,
     amount: 11,
-    product_received: 0,
+    productReceived: 0,
     price: 8,
     title: "biber",
     img: "https://productimages.hepsiburada.net/s/20/500/9883561852978.jpg",
@@ -19,7 +19,7 @@ ProductsData = [
   {
     id: 3,
     amount: 13,
-    product_received: 0,
+    productReceived: 0,
     price: 9,
     title: "marul",
     img: "https://st2.myideasoft.com/shop/du/95/myassets/products/207/pr_01_207.jpg?revision=1422463367",
@@ -27,7 +27,7 @@ ProductsData = [
   {
     id: 4,
     amount: 9,
-    product_received: 0,
+    productReceived: 0,
     price: 12,
     title: "armut",
     img: "https://www.mismarsanalmarket.com/UserFiles/Fotograflar/org/5361-armut-armut-armut.jpg",
@@ -35,7 +35,7 @@ ProductsData = [
   {
     id: 5,
     amount: 25,
-    product_received: 0,
+    productReceived: 0,
     price: 11,
     title: "elma",
     img: "https://ayb.akinoncdn.com/products/2021/06/18/7827/73061620-37a9-444e-9d8d-1442ea2c1178_size780x780_quality60_cropCenter.jpg",
@@ -43,7 +43,7 @@ ProductsData = [
   {
     id: 6,
     amount: 24,
-    product_received: 0,
+    productReceived: 0,
     price: 13,
     title: "sarımsak",
     img: "https://www.erenlercep.com/image/cache/catalog/2021urunler/1haziran/006160-550x550.jpg",
@@ -51,7 +51,7 @@ ProductsData = [
   {
     id: 7,
     amount: 32,
-    product_received: 0,
+    productReceived: 0,
     price: 3,
     title: "karpuz",
     img: "https://productimages.hepsiburada.net/s/6/1500/9722532986930.jpg",
@@ -59,7 +59,7 @@ ProductsData = [
   {
     id: 8,
     amount: 44,
-    product_received: 0,
+    productReceived: 0,
     price: 9,
     title: "mandalina",
     img: "https://img.fidandeposu.com/nova-mandalina-fidani-mandalina-fidani-230-19-B.jpg",
@@ -67,7 +67,7 @@ ProductsData = [
   {
     id: 9,
     amount: 16,
-    product_received: 0,
+    productReceived: 0,
     price: 10,
     title: "muz",
     img: "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30086005/30086005_0_MC/8796857466930_1613125839167.jpg",

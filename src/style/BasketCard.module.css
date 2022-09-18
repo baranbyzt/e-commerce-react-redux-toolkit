@@ -19,7 +19,7 @@
   display: none;
 }
 
-.wrapimg {
+.wrap {
   width: 12.5rem;
   height: 10rem;
   position: absolute;
@@ -99,7 +99,7 @@
     position: relative;
   }
 
-  .wrapimg {
+  .wrap {
     width: 21rem;
     height: 10rem;
     position: absolute;
