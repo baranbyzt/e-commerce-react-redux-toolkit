@@ -9,8 +9,6 @@ const Menu = () => {
   const todoMoneyDirectly = useSelector(selectMoneyDirectly);
   const todoMoney = useSelector(selectMoney);
 
-  let todoMoneyDirectly_ = todoMoneyDirectly - todoMoney?.totalSpend ?? 0;
-
   let goHome = () => {
     navigate("./");
   };
@@ -26,7 +24,7 @@ const Menu = () => {
         </p>
       </div>
       <div>
-        {/* <p className={style.todomoney}>{todoMoneyDirectly_} $</p> */}
+        <p className={style.todomoney}>{todoMoneyDirectly} $</p>
       </div>
       <div className={style.wrapperinner}>
         <img onClick={goBasket} className={style.basketpng} src={img}></img>

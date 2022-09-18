@@ -42,7 +42,8 @@
 .innersection {
   padding: 0px;
   display: flex;
-  margin-left: 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 .innersection p {
   margin-left: 1.5rem;

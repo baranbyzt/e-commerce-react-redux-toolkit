@@ -10,9 +10,9 @@ ProductsData = [
   },
   {
     id: 2,
-    amount: 11,
+    amount: 5,
     productReceived: 0,
-    price: 8,
+    price: 10,
     title: "pepper",
     img: "https://productimages.hepsiburada.net/s/20/500/9883561852978.jpg",
   },
