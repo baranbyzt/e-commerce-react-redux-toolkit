@@ -1,15 +1,21 @@
 import style from "../style/HomeCard.module.css";
 import img from "../assets/images/basket.png";
 import { useDispatch } from "react-redux";
-import { control, totalSpend, basketInncrease } from "../store/CardSlice";
+import {
+  control,
+  totalSpend,
+  basketInncrease,
+  productAdd,
+} from "../store/CardSlice";
 
 const HomeCards = ({ data }) => {
   const dispatch = useDispatch();
 
   let addbtn = () => {
-    dispatch(control(data.id));
-    dispatch(totalSpend(data.price));
-    dispatch(basketInncrease(data.id));
+    dispatch(productAdd(data?.id ?? null));
+    // dispatch(control(data.id));
+    // dispatch(totalSpend(data.price));
+    // dispatch(basketInncrease(data.id));
   };
 
   return (
@@ -18,7 +24,7 @@ const HomeCards = ({ data }) => {
       <div className={style.cardvisible}>
         <p>{data.title}</p>
         <div className={style.innersection}>
-          <p> piece: {data.amount}</p>
+          <p> amound: {data.amount - data.productReceived} kg</p>
           <p>prize: {data.price}₺</p>
         </div>
 

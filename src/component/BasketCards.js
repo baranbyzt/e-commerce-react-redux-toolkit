@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import style from "../style/BasketCard.module.css";
 import { useDispatch } from "react-redux";
-import {
-  btnDecreaseItem,
-  btnIncreaseItem,
-  totalSpendReduce,
-  btnDeleteItem,
-  totalSpend,
-  basketInncrease,
-  basketDecrease,
-} from "../store/CardSlice";
+import { productAdd, productDelete, productReduce } from "../store/CardSlice";
 import img_trash from "../assets/images/trash.png";
 
 const BasketCards = ({ data }) => {
@@ -18,19 +10,14 @@ const BasketCards = ({ data }) => {
   const dispatch = useDispatch();
 
   let decrease = () => {
-    dispatch(btnDecreaseItem(data?.id ?? 1));
-    dispatch(totalSpendReduce(data?.price ?? 1));
-    dispatch(basketDecrease(1));
+    dispatch(productReduce(data?.id ?? null));
   };
   let increase = () => {
-    dispatch(btnIncreaseItem(data?.id ?? 1));
-    dispatch(totalSpend(data?.price ?? 1));
-    dispatch(basketInncrease(data?.id ?? 1));
+    dispatch(productAdd(data?.id ?? null));
   };
-
+  // silmek
   let handleDeleteItem = () => {
-    dispatch(btnDeleteItem(data?.id ?? 1));
-    decrease();
+    dispatch(productDelete(data?.id ?? null));
   };
 
   return (

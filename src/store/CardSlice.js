@@ -7,52 +7,43 @@ export const CardSlice = createSlice({
     items: ProductsData,
     totalBasket: 0,
     totalSpend: 0,
-    disposableMoney: 300,
+    disposableMoney: 250,
   },
   reducers: {
-    control: (state, action) => {
-      const value = action.payload - 1;
-      if (state.items[value].amount <= state.items[value].productReceived) {
-      } else {
-        state.items[value].productReceived += 1;
+    productAdd: (state, action) => {
+      const productId = action.payload - 1;
+      const productPrize = state.items[productId].price;
+      const productAmount = state.items[productId].amount;
+
+      if (
+        state.disposableMoney >= productPrize &&
+        !(productAmount <= state.items[productId].productReceived)
+      ) {
+        state.items[productId].productReceived += 1;
+        state.totalSpend += productPrize;
+        state.disposableMoney -= productPrize;
       }
     },
-    btnIncreaseItem: (state, action) => {
-      const value = action.payload - 1;
-      if (state.items[value].amount <= state.items[value].productReceived) {
-      } else {
-        state.items[value].productReceived += 1;
+    productReduce: (state, action) => {
+      const productId = action.payload - 1;
+      const productPrize = state.items[productId].price;
+
+      if (state.disposableMoney >= 0) {
+        state.items[productId].productReceived -= 1;
+        state.totalSpend -= productPrize;
+        state.disposableMoney += productPrize;
+        console.log("çıkartmaya basıldı");
       }
     },
-    btnDecreaseItem: (state, action) => {
-      const value = action.payload - 1;
-      state.items[value].productReceived -= 1;
-    },
-    btnDeleteItem: (state, action) => {
-      const value = action.payload - 1;
-      state.items[value].productReceived = 0;
-      state.items[value].amount = 0;
-    },
-    totalSpend: (state, action) => {
-      const money = action.payload;
-      state.totalSpend += money;
-    },
-    totalSpendReduce: (state, action) => {
-      const money = action.payload;
-      state.totalSpend -= money;
-    },
-    basketInncrease: (state, action) => {
-      let myid = action.payload - 1;
-      if (state.items[myid].amount > state.items[myid].productReceived) {
-        state.totalBasket += 1;
-      } else {
-      }
-    },
-    basketDecrease: (state, action) => {
-      if (state.totalBasket <= 0) {
-      } else {
-        state.totalBasket -= action.payload;
-      }
+    productDelete: (state, action) => {
+      const productId = action.payload - 1;
+
+      let calculation =
+        state.items[productId].productReceived * state.items[productId].price;
+      state.disposableMoney += calculation;
+
+      state.totalSpend -= calculation;
+      state.items[productId].productReceived = 0;
     },
   },
 });
@@ -60,14 +51,5 @@ export const CardSlice = createSlice({
 export const selectAllProducts = (state) => state.card.items;
 export const selectMoney = (state) => state.card;
 export const selectMoneyDirectly = (state) => state.card.disposableMoney;
-export const {
-  control,
-  btnIncreaseItem,
-  totalSpendReduce,
-  basketInncrease,
-  basketDecrease,
-  btnDecreaseItem,
-  btnDeleteItem,
-  totalSpend,
-} = CardSlice.actions;
+export const { productAdd, productDelete, productReduce } = CardSlice.actions;
 export default CardSlice.reducer;
