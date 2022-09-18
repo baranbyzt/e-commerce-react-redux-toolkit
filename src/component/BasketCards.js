@@ -15,8 +15,8 @@ import img_trash from "../assets/images/trash.png";
 const BasketCards = ({ data }) => {
   const price = data?.price ?? 0;
   const productReceived = data?.productReceived;
+  const dispatch = useDispatch();
 
-  let dispatch = useDispatch();
   let decrease = () => {
     dispatch(btnDecreaseItem(data?.id ?? 1));
     dispatch(totalSpendReduce(data?.price ?? 1));
@@ -28,7 +28,7 @@ const BasketCards = ({ data }) => {
     dispatch(basketInncrease(data?.id ?? 1));
   };
 
-  let trashitem = () => {
+  let handleDeleteItem = () => {
     dispatch(btnDeleteItem(data?.id ?? 1));
     decrease();
   };
@@ -39,7 +39,7 @@ const BasketCards = ({ data }) => {
         <img className={style.wrap} src={data.img} />
         <p className={style.name}>{data?.title ?? "product name"}</p>
         <div className={style.tools}>
-          <div onClick={trashitem} className={style.btntrash}>
+          <div onClick={handleDeleteItem} className={style.btntrash}>
             <img src={img_trash} />
           </div>
 

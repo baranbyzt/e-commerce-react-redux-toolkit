@@ -18,8 +18,8 @@ const HomeCards = ({ data }) => {
       <div className={style.cardvisible}>
         <p>{data.title}</p>
         <div className={style.innersection}>
-          <p> aded: {data.amount}</p>
-          <p>fiyat: {data.price}₺</p>
+          <p> piece: {data.amount}</p>
+          <p>prize: {data.price}₺</p>
         </div>
 
         <div onClick={addbtn} className={style.addbtn}>

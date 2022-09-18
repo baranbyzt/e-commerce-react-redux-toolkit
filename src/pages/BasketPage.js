@@ -14,9 +14,11 @@ const BasketPage = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.itemssection}>
-        {todos.map((todo, key) => (
-          <BasketCards key={key} data={todo} />
-        ))}
+        {todos !== null || undefined ? (
+          todos.map((todo, key) => <BasketCards key={key} data={todo} />)
+        ) : (
+          <p>ups..</p>
+        )}
       </div>
       <div className={style.bill}>
         <div>

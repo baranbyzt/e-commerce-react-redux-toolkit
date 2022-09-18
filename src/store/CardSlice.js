@@ -11,26 +11,27 @@ export const CardSlice = createSlice({
   },
   reducers: {
     control: (state, action) => {
-      const dd = action.payload - 1;
-      if (state.items[dd].amount <= state.items[dd].productReceived) {
+      const value = action.payload - 1;
+      if (state.items[value].amount <= state.items[value].productReceived) {
       } else {
-        state.items[dd].productReceived += 1;
+        state.items[value].productReceived += 1;
       }
     },
     btnIncreaseItem: (state, action) => {
-      const dd = action.payload - 1;
-      if (state.items[dd].amount <= state.items[dd].productReceived) {
+      const value = action.payload - 1;
+      if (state.items[value].amount <= state.items[value].productReceived) {
       } else {
-        state.items[dd].productReceived += 1;
+        state.items[value].productReceived += 1;
       }
     },
     btnDecreaseItem: (state, action) => {
-      const dd = action.payload - 1;
-      state.items[dd].productReceived -= 1;
+      const value = action.payload - 1;
+      state.items[value].productReceived -= 1;
     },
     btnDeleteItem: (state, action) => {
-      const dd = action.payload - 1;
-      state.items[dd].productReceived = 0;
+      const value = action.payload - 1;
+      state.items[value].productReceived = 0;
+      state.items[value].amount = 0;
     },
     totalSpend: (state, action) => {
       const money = action.payload;
