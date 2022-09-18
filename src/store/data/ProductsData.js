@@ -5,7 +5,7 @@ ProductsData = [
     amount: 3,
     productReceived: 0,
     price: 5,
-    title: "domates",
+    title: "tomato",
     img: "https://www.medikalakademi.com.tr/wp-content/uploads/2021/02/domates-tomato-4.jpg.webp",
   },
   {
@@ -13,7 +13,7 @@ ProductsData = [
     amount: 11,
     productReceived: 0,
     price: 8,
-    title: "biber",
+    title: "pepper",
     img: "https://productimages.hepsiburada.net/s/20/500/9883561852978.jpg",
   },
   {
@@ -21,7 +21,7 @@ ProductsData = [
     amount: 13,
     productReceived: 0,
     price: 9,
-    title: "marul",
+    title: "lettuce",
     img: "https://st2.myideasoft.com/shop/du/95/myassets/products/207/pr_01_207.jpg?revision=1422463367",
   },
   {
@@ -29,7 +29,7 @@ ProductsData = [
     amount: 9,
     productReceived: 0,
     price: 12,
-    title: "armut",
+    title: "pear",
     img: "https://www.mismarsanalmarket.com/UserFiles/Fotograflar/org/5361-armut-armut-armut.jpg",
   },
   {
@@ -37,7 +37,7 @@ ProductsData = [
     amount: 25,
     productReceived: 0,
     price: 11,
-    title: "elma",
+    title: "apple",
     img: "https://ayb.akinoncdn.com/products/2021/06/18/7827/73061620-37a9-444e-9d8d-1442ea2c1178_size780x780_quality60_cropCenter.jpg",
   },
   {
@@ -45,7 +45,7 @@ ProductsData = [
     amount: 24,
     productReceived: 0,
     price: 13,
-    title: "sarımsak",
+    title: "garlic",
     img: "https://www.erenlercep.com/image/cache/catalog/2021urunler/1haziran/006160-550x550.jpg",
   },
   {
@@ -53,7 +53,7 @@ ProductsData = [
     amount: 32,
     productReceived: 0,
     price: 3,
-    title: "karpuz",
+    title: "watermelon",
     img: "https://productimages.hepsiburada.net/s/6/1500/9722532986930.jpg",
   },
   {
@@ -61,7 +61,7 @@ ProductsData = [
     amount: 44,
     productReceived: 0,
     price: 9,
-    title: "mandalina",
+    title: "mandarin",
     img: "https://img.fidandeposu.com/nova-mandalina-fidani-mandalina-fidani-230-19-B.jpg",
   },
   {
@@ -69,7 +69,7 @@ ProductsData = [
     amount: 16,
     productReceived: 0,
     price: 10,
-    title: "muz",
+    title: "banana",
     img: "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30086005/30086005_0_MC/8796857466930_1613125839167.jpg",
   },
 ];
