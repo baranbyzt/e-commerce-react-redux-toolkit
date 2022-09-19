@@ -29,7 +29,7 @@ const Menu = () => {
       </div>
 
       <div className={style.wrapperinner}>
-        <span className={style.addtocart_wrapper}>
+        <span className={style.addtocartwrapper}>
           <p className={style.addtocart}>{todoMoney.addToCart}</p>
         </span>
         <img onClick={goToBasket} className={style.basketpng} src={img}></img>

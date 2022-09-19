@@ -1,7 +1,8 @@
 .wrapper {
   width: 18.75rem;
-  height: 21.75rem;
+  height: 32.75rem;
   padding: 0.4rem;
+  overflow: hidden;
   margin: 0.7rem;
   font-size: 1.5rem;
   position: relative;
@@ -11,28 +12,15 @@
   border-radius: 1.25rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0.1rem 1.3rem;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .cardimg {
   width: 100%;
-  height: 11.25rem;
+  height: 22.25rem;
+  border-radius: 1.25rem;
 }
-.addbtn {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgb(66, 194, 15);
-  color: black;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -0.6rem;
-  right: -0.6rem;
-  cursor: pointer;
-  width: 3.1rem;
-  height: 2.5rem;
-  padding: 0.3rem;
-  border-radius: 4px;
-}
+
 .addbtn:hover {
   background-color: rgb(228, 228, 15);
 }
@@ -41,6 +29,7 @@
 }
 .innersection {
   padding: 0px;
+  padding-left: 0.9rem;
   display: flex;
   margin-right: auto;
   margin-left: auto;
@@ -48,26 +37,19 @@
 .innersection p {
   margin-left: 1.5rem;
 }
-.inneraddbtn {
+
+.countdata {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.count {
-  background-color: rgb(248, 248, 248);
-  color: white;
-  width: 1.6rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  border: 1px solid black;
-  position: absolute;
-  top: -0.4rem;
-  right: -0.4rem;
-}
-.count b {
   color: black;
+  background-color: white;
+  border-radius: 100%;
+  border: 0.1rem solid black;
+  width: 2rem;
+  height: 2rem;
+  left: -1.5rem;
+  top: -1.5rem;
 }
 
 .show {
@@ -76,4 +58,17 @@
 
 .hidden {
   display: none;
+}
+.switchpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  height: 2.4rem;
+  background: green;
 }

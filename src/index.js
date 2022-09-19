@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Navigation from "./Navigation";
+import Navigation from "./utils/Navigation";
 import "./style/General.css";
 import { Provider } from "react-redux";
 import store from "./store/Store";

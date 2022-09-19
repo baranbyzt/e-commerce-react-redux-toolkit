@@ -1,13 +1,12 @@
 .wrapper {
   width: 37.5rem;
-  height: 10rem;
+  height: 17rem;
   margin: 0.6rem;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   border-radius: 0.5rem;
-  overflow: hidden;
   position: relative;
 }
 
@@ -20,14 +19,17 @@
 }
 
 .wrap {
-  width: 12.5rem;
-  height: 10rem;
+  width: 14.5rem;
+  height: 17rem;
   position: absolute;
   right: 0;
 }
-
+.title {
+  font-size: 2.2rem;
+  padding-left: 1rem;
+}
 .tools {
-  width: 37.5rem;
+  width: 27.5rem;
   height: 3.75rem;
   margin-top: 3.75rem;
   display: flex;
@@ -56,7 +58,6 @@
 .received {
   font-size: 2.2rem;
 }
-
 .btntrash {
   width: 1.8rem;
   height: 1.8rem;
@@ -65,7 +66,12 @@
   justify-content: center;
   align-items: center;
 }
-
+.addbtn {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  color: black;
+}
 .btntrash img {
   width: 1.8rem;
   height: 1.8rem;
@@ -73,14 +79,28 @@
 
 .money {
   position: absolute;
-  left: 0.2rem;
+  left: 0.8rem;
   font-size: 2rem;
 }
-
-.name {
+.count {
+  background-color: rgb(248, 248, 248);
+  color: white;
+  width: 1.6rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
   position: absolute;
-  left: 5px;
-  top: -2px;
+  top: -0.4rem;
+  right: -0.4rem;
+}
+.count b {
+  color: black;
+}
+
+.count {
+  position: absolute;
+  left: 0.5rem;
+  top: -0.1rem;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 600px) {
@@ -88,7 +108,7 @@
     display: relative;
     background-color: yellow;
     width: 22.5rem;
-    height: 20rem;
+    height: 33rem;
     margin: 0.6rem;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
@@ -100,8 +120,8 @@
   }
 
   .wrap {
-    width: 21rem;
-    height: 10rem;
+    width: 22.5rem;
+    height: 20rem;
     position: absolute;
     bottom: 0;
   }
