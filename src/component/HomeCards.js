@@ -1,21 +1,13 @@
 import style from "../style/HomeCard.module.css";
 import img from "../assets/images/basket.png";
 import { useDispatch } from "react-redux";
-import {
-  control,
-  totalSpend,
-  basketInncrease,
-  productAdd,
-} from "../store/CardSlice";
+import { productAdd } from "../store/CardSlice";
 
 const HomeCards = ({ data }) => {
   const dispatch = useDispatch();
 
   let addbtn = () => {
     dispatch(productAdd(data?.id ?? null));
-    // dispatch(control(data.id));
-    // dispatch(totalSpend(data.price));
-    // dispatch(basketInncrease(data.id));
   };
 
   return (

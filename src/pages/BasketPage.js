@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../style/BasketPage.module.css";
 import BasketCards from "../component/BasketCards";
 import { useSelector } from "react-redux";
-import { selectMoney, selectAllProducts } from "../store/CardSlice";
+import { selectCart, selectAllProducts } from "../store/CardSlice";
 
 const BasketPage = () => {
   const todos = useSelector(selectAllProducts);
-  const todoMoney = useSelector(selectMoney);
+  const todoMoney = useSelector(selectCart);
 
   let KDV = todoMoney.totalSpend / 18;
   const nullValue = 110;
+  let getSpend = todoMoney?.totalSpend ?? nullValue;
 
   return (
     <div className={style.wrapper}>
@@ -22,19 +23,13 @@ const BasketPage = () => {
       </div>
       <div className={style.bill}>
         <div>
-          <p>basket total: {todoMoney?.totalSpend ?? nullValue} ₺</p>
+          <p>basket total: {getSpend} ₺</p>
           <p>%18-KDV: {KDV.toFixed(2)} ₺</p>
+          <p>shipping cost: {getSpend >= 100 ? "FREE" : 30} </p>
           <p>
-            shipping cost:{" "}
-            {todoMoney?.totalSpend ?? nullValue > 100 ? "FREE" : 30}{" "}
-          </p>
-          <p>
-            TOTAL:{" "}
-            {(todoMoney?.totalSpend ?? nullValue > 100
-              ? todoMoney?.totalSpend ?? nullValue + KDV
-              : todoMoney?.totalSpend ?? nullValue + KDV + 30
-            ).toFixed(2)}{" "}
-            ₺
+            {`total: ${(getSpend + KDV + (getSpend >= 100 ? 30 : 0)).toFixed(
+              2
+            )} ₺`}
           </p>
         </div>
       </div>

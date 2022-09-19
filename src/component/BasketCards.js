@@ -5,9 +5,9 @@ import { productAdd, productDelete, productReduce } from "../store/CardSlice";
 import img_trash from "../assets/images/trash.png";
 
 const BasketCards = ({ data }) => {
+  const dispatch = useDispatch();
   const price = data?.price ?? 0;
   const productReceived = data?.productReceived;
-  const dispatch = useDispatch();
 
   let decrease = () => {
     dispatch(productReduce(data?.id ?? null));
@@ -25,6 +25,7 @@ const BasketCards = ({ data }) => {
       <div className={style.wrapper}>
         <img className={style.wrap} src={data.img} />
         <p className={style.name}>{data?.title ?? "product name"}</p>
+
         <div className={style.tools}>
           <div onClick={handleDeleteItem} className={style.btntrash}>
             <img src={img_trash} />
