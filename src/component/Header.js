@@ -1,33 +1,38 @@
 import style from "../style/MenuCard.module.css";
 import img from "../assets/images/basket.png";
 import { useNavigate } from "react-router-dom";
-import { selectMoneyDirectly, selectMoney } from "../store/CardSlice";
+import { selectMoneyDirectly, selectCart } from "../store/CardSlice";
 import { useSelector } from "react-redux";
 
 const Menu = () => {
   let navigate = useNavigate();
   const todoMoneyDirectly = useSelector(selectMoneyDirectly);
-  const todoMoney = useSelector(selectMoney);
+  const todoMoney = useSelector(selectCart);
 
-  let goHome = () => {
+  let goToHome = () => {
     navigate("./");
   };
-  let goBasket = () => {
+  let goToBasket = () => {
     navigate("./basket");
   };
 
   return (
     <div className={style.wrapper}>
       <div>
-        <p onClick={goHome} className={style.home}>
+        <p onClick={goToHome} className={style.home}>
           Market
         </p>
       </div>
+
       <div>
-        <p className={style.todomoney}>{todoMoneyDirectly} $</p>
+        <p className={style.todomoney}>{todoMoneyDirectly} ₺</p>
       </div>
+
       <div className={style.wrapperinner}>
-        <img onClick={goBasket} className={style.basketpng} src={img}></img>
+        <span className={style.addtocart_wrapper}>
+          <p className={style.addtocart}>{todoMoney.addToCart}</p>
+        </span>
+        <img onClick={goToBasket} className={style.basketpng} src={img}></img>
       </div>
     </div>
   );

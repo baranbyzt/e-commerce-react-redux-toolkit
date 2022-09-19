@@ -5,8 +5,8 @@ export const CardSlice = createSlice({
   name: "card",
   initialState: {
     items: ProductsData,
-    totalBasket: 0,
     totalSpend: 0,
+    addToCart: 0,
     disposableMoney: 250,
   },
   reducers: {
@@ -22,6 +22,7 @@ export const CardSlice = createSlice({
         state.items[productId].productReceived += 1;
         state.totalSpend += productPrize;
         state.disposableMoney -= productPrize;
+        state.addToCart += 1;
       }
     },
     productReduce: (state, action) => {
@@ -32,11 +33,13 @@ export const CardSlice = createSlice({
         state.items[productId].productReceived -= 1;
         state.totalSpend -= productPrize;
         state.disposableMoney += productPrize;
-        console.log("çıkartmaya basıldı");
+        state.addToCart -= 1;
       }
     },
     productDelete: (state, action) => {
       const productId = action.payload - 1;
+
+      state.addToCart -= state.items[productId].productReceived;
 
       let calculation =
         state.items[productId].productReceived * state.items[productId].price;
@@ -49,7 +52,7 @@ export const CardSlice = createSlice({
 });
 
 export const selectAllProducts = (state) => state.card.items;
-export const selectMoney = (state) => state.card;
+export const selectCart = (state) => state.card;
 export const selectMoneyDirectly = (state) => state.card.disposableMoney;
 export const { productAdd, productDelete, productReduce } = CardSlice.actions;
 export default CardSlice.reducer;

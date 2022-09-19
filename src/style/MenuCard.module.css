@@ -50,7 +50,26 @@
 }
 .wrapperinner {
   position: relative;
+  display: flex;
 }
+.addtocart {
+  font-size: 1.3rem;
+  color: black;
+}
+.addtocart_wrapper {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.2rem;
+  background-color: white;
+  border: 1px black solid;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
 .basketcounter {
   background-color: rgb(0, 0, 0);
   width: 1.4rem;
