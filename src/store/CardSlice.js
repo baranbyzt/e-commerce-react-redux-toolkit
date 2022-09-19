@@ -7,7 +7,7 @@ export const CardSlice = createSlice({
     items: ProductsData,
     totalSpend: 0,
     addToCart: 0,
-    disposableMoney: 250,
+    disposableMoney: 500,
   },
   reducers: {
     productAdd: (state, action) => {
@@ -29,7 +29,10 @@ export const CardSlice = createSlice({
       const productId = action.payload - 1;
       const productPrize = state.items[productId].price;
 
-      if (state.disposableMoney >= 0) {
+      if (
+        state.disposableMoney >= 0 &&
+        state.items[productId].productReceived >= 1
+      ) {
         state.items[productId].productReceived -= 1;
         state.totalSpend -= productPrize;
         state.disposableMoney += productPrize;

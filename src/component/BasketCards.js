@@ -24,7 +24,7 @@ const BasketCards = ({ data }) => {
     <div className={data?.productReceived > 0 ? style.show : style.hidden}>
       <div className={style.wrapper}>
         <img className={style.wrap} src={data.img} />
-        <p className={style.name}>{data?.title ?? "product name"}</p>
+        <p className={style.title}>{data?.title ?? "product name"}</p>
 
         <div className={style.tools}>
           <div onClick={handleDeleteItem} className={style.btntrash}>

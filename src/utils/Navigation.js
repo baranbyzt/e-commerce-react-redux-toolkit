@@ -1,7 +1,8 @@
-import Header from "./component/Header";
-import HomePage from "./pages/HomePage";
-import BasketPage from "./pages/BasketPage";
-import EmptyPage from "./pages/EmptyPage";
+import Header from "../component/Header";
+import HomePage from "../pages/HomePage";
+import BasketPage from "../pages/BasketPage";
+import EmptyPage from "../pages/EmptyPage";
+import ProductDetail from "../pages/DetailPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function Navigation() {
@@ -12,6 +13,7 @@ function Navigation() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/basket" element={<BasketPage />} />
+          <Route path="/detail/:productId" element={<ProductDetail />} />
           <Route path="*" element={<EmptyPage />} />
         </Routes>
       </div>
