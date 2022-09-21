@@ -15,7 +15,7 @@ const BasketCards = ({ data }) => {
   let increase = () => {
     dispatch(productAdd(data?.id ?? null));
   };
-  // silmek
+
   let handleDeleteItem = () => {
     dispatch(productDelete(data?.id ?? null));
   };

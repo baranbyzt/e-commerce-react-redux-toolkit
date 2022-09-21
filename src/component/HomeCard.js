@@ -1,16 +1,9 @@
 import style from "../style/HomeCard.module.css";
-import img from "../assets/images/basket.png";
-import { useDispatch } from "react-redux";
-import { productAdd } from "../store/CardSlice";
 import { useNavigate } from "react-router-dom";
 
 const HomeCards = ({ data }) => {
-  const dispatch = useDispatch();
   let navigate = useNavigate();
 
-  let addBtn = () => {
-    dispatch(productAdd(data?.id ?? null));
-  };
   let goToDetail = () => {
     navigate(`/detail/${data.id}`);
   };
@@ -18,16 +11,16 @@ const HomeCards = ({ data }) => {
   return (
     <div className={style.wrapper}>
       <div>
-        <div
-          style={{ position: "absolute" }}
-          className={data.productReceived > 0 ? style.show : style.hidden}
-        >
+        <div className={data.productReceived > 0 ? style.show : style.hidden}>
           <b className={style.countdata}>{data.productReceived}</b>
         </div>
       </div>
       <img className={style.cardimg} src={data.img} />
       <div className={style.cardvisible}>
-        <p>{data.title}</p>
+        <div className={style.titlestyle}>
+          <p>{data.title}</p>
+          <p>{data.seller}</p>
+        </div>
         <div className={style.innersection}>
           <p> amound: {data.amount - data.productReceived} kg</p>
           <p>prize: {data.price}₺</p>
