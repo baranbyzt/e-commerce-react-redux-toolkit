@@ -23,7 +23,9 @@ const DetailCart = ({ data }) => {
         <h3 className={style.description}>{data.description}</h3>
 
         <div className={style.txtgroups}>
-          <p> amound:{data.amount - data.productReceived}</p>
+          <p>
+            amound:{data.amount}/{data.amount - data.productReceived}
+          </p>
           <p>price:{data.price} ₺</p>
           <p>category-{data.category}</p>
           <p>{data.seller}-Supply</p>

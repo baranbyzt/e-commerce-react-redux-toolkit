@@ -7,7 +7,7 @@ export const CardSlice = createSlice({
     items: ProductsData,
     totalSpend: 0,
     addToCart: 0,
-    disposableMoney: 500,
+    disposableMoney: 1200,
   },
   reducers: {
     productAdd: (state, action) => {

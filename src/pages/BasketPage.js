@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "../style/BasketPage.module.css";
-import BasketCards from "../component/BasketCards";
+import BasketCards from "../component/BasketCard";
 import { useSelector } from "react-redux";
 import { selectCart, selectAllProducts } from "../store/CardSlice";
 
