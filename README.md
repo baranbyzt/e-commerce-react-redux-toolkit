@@ -26,6 +26,10 @@ https://e-commerce-react-redux-toolkit.vercel.app
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/baran-beyazit/)
 
 
-  
-![example](https://user-images.githubusercontent.com/87334718/163677318-d804f51e-9f10-4192-a9ec-ca8ff620656b.jpg)
-![example2](https://user-images.githubusercontent.com/87334718/163677323-84417e12-69df-48d0-932e-261ab1b68dea.jpg)
+ ## Images
+ You can search the listed products by category suppler and name and find the product you are looking for.
+![Ekran Resmi 2022-09-22 ÖS 5 27 43](https://user-images.githubusercontent.com/87334718/191775463-86c4ccbb-90d5-4251-bb16-764326d8c3b0.png)
+You can buy and sell more of the products you add to the cart or remove them completely from the cart. In addition, you can view the details in the pricing section.
+![Ekran Resmi 2022-09-22 ÖS 5 28 30](https://user-images.githubusercontent.com/87334718/191775484-c7908a84-0f50-49ed-918b-6b68fb22d2e6.png)
+You can get more detailed information about the products by entering the product details.
+![Ekran Resmi 2022-09-22 ÖS 5 29 06](https://user-images.githubusercontent.com/87334718/191775501-b3e28bc3-90a0-48fb-8dcd-760261c4e33f.png)
