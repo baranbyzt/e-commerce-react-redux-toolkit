@@ -7,7 +7,7 @@ import img_trash from "../assets/images/trash.png";
 const BasketCards = ({ data }) => {
   const dispatch = useDispatch();
   const price = data?.price ?? 0;
-  const productReceived = data?.productReceived;
+  const productReceived = data?.productReceived || 0;
 
   let decrease = () => {
     dispatch(productReduce(data?.id ?? null));
