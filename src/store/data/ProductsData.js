@@ -46,7 +46,7 @@ ProductsData = [
     title: "prima",
     img: "https://cdn.cimri.io/image/1000x1000/primaaktifbebeknomaxiadetbebekbezi_467556392.jpg",
     category: "babby",
-    seller: "prima",
+    seller: "migros",
   },
   {
     id: 5,

@@ -11,6 +11,8 @@ const BasketPage = () => {
   let KDV = todoMoney.totalSpend / 18;
   const nullValue = 110;
   let getSpend = todoMoney?.totalSpend ?? nullValue;
+  let shippingCost = getSpend >= 100 ? 0 : 30;
+  console.log(getSpend);
 
   return (
     <div className={style.wrapper}>
@@ -25,12 +27,8 @@ const BasketPage = () => {
         <div>
           <p>basket total: {getSpend} ₺</p>
           <p>%18-KDV: {KDV.toFixed(2)} ₺</p>
-          <p>shipping cost: {getSpend >= 100 ? "FREE" : 30} </p>
-          <p>
-            {`total: ${(getSpend + KDV + (getSpend >= 100 ? 30 : 0)).toFixed(
-              2
-            )} ₺`}
-          </p>
+          <p>shipping cost: {getSpend >= 100 ? "free" : 30} </p>
+          <p>{`total: ${(getSpend + KDV + shippingCost).toFixed(2)} ₺`}</p>
         </div>
       </div>
     </div>

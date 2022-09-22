@@ -1,13 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
 import ProductsData from "./data/ProductsData";
+import {
+  SaveProduct,
+  GetProduct,
+  SaveDisposbleMoney,
+  GetDisposbleMoney,
+  SaveAddToCart,
+  GetAddToCart,
+  SaveTotalSpend,
+  GetTotalSpend,
+} from "../utils/storage/CartStorage";
+const defaultMoneyMoney = 1200;
+const defaultAddToCart = 0;
+const defaultSpendMoney = 0;
+
+if (GetProduct() == null || undefined)
+  window.localStorage.setItem("products", JSON.stringify(ProductsData));
+
+if (GetDisposbleMoney() == null || undefined)
+  window.localStorage.setItem(
+    "disposableMoney",
+    JSON.stringify(defaultMoneyMoney)
+  );
+
+if (GetAddToCart() == null || undefined)
+  window.localStorage.setItem("addToCart", JSON.stringify(defaultAddToCart));
+
+if (GetTotalSpend() == null || undefined)
+  window.localStorage.setItem("totalSpend", JSON.stringify(defaultSpendMoney));
 
 export const CardSlice = createSlice({
   name: "card",
   initialState: {
-    items: ProductsData,
-    totalSpend: 0,
-    addToCart: 0,
-    disposableMoney: 1200,
+    items: JSON.parse(GetProduct()) || ProductsData,
+    totalSpend: JSON.parse(GetTotalSpend()) || defaultSpendMoney,
+    addToCart: JSON.parse(GetAddToCart()) || defaultAddToCart,
+    disposableMoney: JSON.parse(GetDisposbleMoney()) || defaultMoneyMoney,
   },
   reducers: {
     productAdd: (state, action) => {
@@ -23,6 +51,11 @@ export const CardSlice = createSlice({
         state.totalSpend += productPrize;
         state.disposableMoney -= productPrize;
         state.addToCart += 1;
+
+        SaveTotalSpend(state.totalSpend);
+        SaveAddToCart(state.addToCart);
+        SaveDisposbleMoney(state.disposableMoney);
+        SaveProduct(JSON.parse(JSON.stringify(state.items)));
       }
     },
     productReduce: (state, action) => {
@@ -37,19 +70,27 @@ export const CardSlice = createSlice({
         state.totalSpend -= productPrize;
         state.disposableMoney += productPrize;
         state.addToCart -= 1;
+
+        SaveTotalSpend(state.totalSpend);
+        SaveAddToCart(state.addToCart);
+        SaveDisposbleMoney(state.disposableMoney);
+        SaveProduct(JSON.parse(JSON.stringify(state.items)));
       }
     },
     productDelete: (state, action) => {
       const productId = action.payload - 1;
-
       state.addToCart -= state.items[productId].productReceived;
 
       let calculation =
         state.items[productId].productReceived * state.items[productId].price;
       state.disposableMoney += calculation;
-
       state.totalSpend -= calculation;
       state.items[productId].productReceived = 0;
+
+      SaveTotalSpend(state.totalSpend);
+      SaveAddToCart(state.addToCart);
+      SaveDisposbleMoney(state.disposableMoney);
+      SaveProduct(JSON.parse(JSON.stringify(state.items)));
     },
   },
 });

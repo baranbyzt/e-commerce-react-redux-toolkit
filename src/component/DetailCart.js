@@ -40,7 +40,7 @@ const DetailCart = ({ data }) => {
               -
             </div>
           ) : (
-            <p></p>
+            <p>...</p>
           )}
         </div>
       </div>
