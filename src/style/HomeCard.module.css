@@ -1,6 +1,6 @@
 .wrapper {
   width: 18.75rem;
-  height: 33.1rem;
+  height: 31.1rem;
   padding: 0.4rem;
   overflow: hidden;
   margin: 0.7rem;
@@ -8,7 +8,6 @@
   position: relative;
   color: black;
   background-color: white;
-  /* border: 0.1rem solid black; */
   border-radius: 1.25rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -21,7 +20,11 @@
   height: 22.25rem;
   border-radius: 1.25rem;
 }
-
+.countwrapper {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
 .addbtn:hover {
   background-color: rgb(228, 228, 15);
 }

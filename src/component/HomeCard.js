@@ -10,7 +10,7 @@ const HomeCards = ({ data }) => {
 
   return (
     <div className={style.wrapper}>
-      <div>
+      <div className={style.countwrapper}>
         <div className={data.productReceived > 0 ? style.show : style.hidden}>
           <b className={style.countdata}>{data.productReceived}</b>
         </div>
