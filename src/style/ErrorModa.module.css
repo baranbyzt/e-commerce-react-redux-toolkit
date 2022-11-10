@@ -1,0 +1,60 @@
+.modal {
+  position: absolute;
+  width: 375px;
+  min-height: 125px;
+  right: 10px;
+  bottom: 10px;
+  background: #c4c4c4;
+  border-radius: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+}
+
+.close {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.error_title {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+}
+.error_message_wrapper {
+  padding-top: 10px;
+}
+.error_message_wrapper p:first-child {
+  padding-top: 10px;
+}
+.error_message_wrapper p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+.error_message {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  right: 20px;
+  top: 35px;
+  background-color: #ff4e78;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error_message p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
